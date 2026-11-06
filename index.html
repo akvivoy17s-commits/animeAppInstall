@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Anime Portal – Download for Android</title>
 <meta name="description" content="Download the Anime Portal APK for Android. Fast, secure and free.">
 <link rel="icon" href="logo.png">
@@ -154,6 +154,23 @@ footer{padding:40px 0;color:var(--muted);font-size:.88rem}
   h1{font-size:1.9rem}
   .meta div b{font-size:1rem}
   .dl-info{grid-template-columns:1fr}
+}
+
+/* ===== MOBILE FIT FIX ===== */
+html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip}
+.hero,section,header,footer{max-width:100%}
+.hero{overflow:hidden}              /* glow circles screen-ku veliya pogaama */
+.hero-grid>*,.container>*{min-width:0}
+img,video{max-width:100%}
+#petals{z-index:-1}                 /* petals content mela overlay aagaadhu */
+@media(max-width:860px){
+  .hero::before{width:360px;height:360px;right:-120px}
+  .hero::after{width:300px;height:300px;left:-120px}
+  .shots{max-width:100%;padding-left:20px;padding-right:20px;scroll-padding:0 20px}
+  .shot{flex-basis:min(170px,52vw)}
+  .phone{max-width:100%}
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+  footer,.foot{margin-bottom:0}
 }
 </style>
 </head>
